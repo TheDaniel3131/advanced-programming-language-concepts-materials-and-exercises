@@ -1,7 +1,8 @@
 # advanced-programming-language-concepts-materials-and-exercises
 
 Module: Advanced Programming Language Concepts
+Aim: Various Programming Paradigms
 
-Technicalspecs:
+Technical specs:
 - Nodejs
 - swi-prolog
