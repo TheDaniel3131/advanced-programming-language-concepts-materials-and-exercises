@@ -1,7 +1,7 @@
 # Continue from Lesson 1
 
-Functional Programming Paradigms(Under Declarative Programming Paradigms) - Focus on readability, maintainability, reusablity, concurrent and parallel execution, and predictability.
-Imperattive Programming Paradigms - Tells the computer **how** to do things, whereas declarative focuses on what we want to get from the computer.
+Functional Programming Paradigm (Under Declarative Programming Paradigm) - Focus on readability, maintainability, reusablity, concurrent and parallel execution, and predictability.
+Imperattive Programming Paradigm - Tells the computer **how** to do things, whereas declarative focuses on what we want to get from the computer.
 
 
 1) https://www.geeksforgeeks.org/difference-between-functional-and-imperative-programming/
