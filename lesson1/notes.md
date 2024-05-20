@@ -9,3 +9,7 @@ Imperattive Programming Paradigm - Tells the computer **how** to do things, wher
 3) https://chatgpt.com/share/1dcbac5c-7a44-4bb2-afb9-e1d3cc47030b
 4) https://www.studocu.com/my/document/asia-pacific-university-of-technology-and-innovation/software-engineering/tutorial-1-2/11656367
 5) https://www.ilearnengineering.com/computer/understanding-imperative-and-declarative-programming#:~:text=While%20we%20discussed%20programming%20paradigms,to%20get%20from%20the%20computer.
+
+<hr>
+## Learn more about functional programming ->
+MDN Firefox Javascript: https://developer.mozilla.org/en-US/docs/Web/JavaScript
