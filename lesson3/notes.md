@@ -1,4 +1,4 @@
-![image](https://github.com/TheDaniel3131/advanced-programming-language-concepts-materials-and-exercises/assets/71692327/d1acfb04-f086-4a96-bada-1799fd742459)# Lesson 3
+# Lesson 3
 
 Recaps from this week tutorial:
 1. Purity and Higher Order Function (Mostly in Java/JavaScript):
