@@ -77,3 +77,63 @@ console.log(p);
    - Gorilla/Banana problem: No selective inheritance. “You wanted a banana but what you got was a gorilla holding the banana and the entire jungle.” ∼ Joe Armstrong in “Coders at Work”
    - Duplication by necessity: Due to inflexible hierarchies and the gorilla/banana problem, code reuse is often accomplished by copy/paste, violating DRY (Don’t Repeat Yourself) and defeating the entire purpose of inheritance in the first place.
 
+### First Clsss Objects
+- A functional programming language is one that treats functions as first rate citizens or first-class objects.
+- That means that it allows you to pass a function as an argument to another function, return a function as the result of a function call, etc.
+- Basically it allows you to pass functions around as if they were normal variables.
+- The ability of functional programming languages to treat functions as values and pass them to functions as parameters make the code more readable and easily understandable.
+- JavaScript function definitions can be nested within other functions, and they have access to any variables that are in scope where they are defined. This means that JavaScript functions are closures, and it enables important and powerful programming techniques.
+
+### Function Declaration
+- Function declarations consist of the function keyword, followed by : 
+   - An identifier that names the function. The name is a required part of function declarations: it is used as the name of a variable, and the newly defined function object is assigned to the variable. 
+   - A pair of parentheses around a comma-separated list of zero or more identifiers. These identifiers are the parameter names for the function, and they behave like local variables within the body of the function. 
+   - A pair of curly braces with zero or more JavaScript statements inside. These statements are the body of the function: they are executed whenever the function is invoked.
+   - One of the important things to understand about function declarations is that the name of the function becomes a variable whose value is the function itself. Function declaration statements are “hoisted” to the top of the enclosing script, function, or block so that functions defined in this way may be invoked from code that appears before the definition.  All of the functions declared in a block of JavaScript code will be defined throughout that block, and they will be defined before the JavaScript interpreter begins to execute any of the code in that block. 
+   - The return statement causes the function to stop executing and to return the value of its expression (if any) to the caller. If the return statement does not have an associated expression, the return value of the function is undefined.
+
+### Function Expressions
+- Function expressions, unlike function declarations, do not declare a variable.
+- Instead, they assign a function object to an existing variable.
+- However, a function expression can include a name, which is useful for recursion.
+- To ensure that the new function object can be referenced multiple times, it is recommended to assign it to a constant or variable using const.
+- If a function expression includes a name, that name becomes a local variable within the function.
+- This allows the function scope to include a binding of the function name to the function object.
+- There is an important distinction between defining a function using a function declaration and assigning a function to a variable after creating it as an expression.
+- With function declarations, the function objects are created and their definitions are hoisted before the code begins to run.
+- This enables calling these functions from code written above the declaration.
+- However, functions defined as expressions do not exist until the expression defining them is evaluated.
+- Furthermore, you cannot refer to a function defined as an expression until it is assigned to a variable.
+- Therefore, functions defined with expressions cannot be invoked before they are defined.
+
+### Function Returning Function
+Example: 
+![image](https://github.com/TheDaniel3131/advanced-programming-language-concepts-materials-and-exercises/assets/71692327/452ff6f2-3275-4208-a6e9-bb968eef3f3e)
+
+### Function as value
+Example:
+![image](https://github.com/TheDaniel3131/advanced-programming-language-concepts-materials-and-exercises/assets/71692327/16e5bef5-b237-4620-9f42-ef893728f88e)
+
+### Function as argument
+Example: 
+![image](https://github.com/TheDaniel3131/advanced-programming-language-concepts-materials-and-exercises/assets/71692327/706b591b-0993-44c0-ab11-c0872bb26296)
+
+### Currying
+- It is the process of transforming a function into a series of nested unary functions.
+- It involves converting a function that takes multiple arguments into a set of functions, each accepting a single argument.
+- The arity of a function refers to the number of arguments it takes.
+- When a function is curried, the result is a chain of unary functions.
+- For example, currying a function f with three arguments would create a nested unary function g.
+- This allows for the same functionality to be achieved by calling g with each argument separately or in sequence.
+
+### Arity
+- The arity of a function represents the numbers of arguments it takes.
+- A unary function is a function that takes one argument
+- A binary function takes two arguments
+- A ternary function takes three argument
+- An n-ary function takes n argument
+- A nullary function takes no argument
+  
+- Currying transforms a n-nary function into n unary function.
+
+
