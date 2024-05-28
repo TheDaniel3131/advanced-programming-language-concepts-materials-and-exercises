@@ -126,6 +126,33 @@ Example:
 - For example, currying a function f with three arguments would create a nested unary function g.
 - This allows for the same functionality to be achieved by calling g with each argument separately or in sequence.
 
+#### Curried Function
+- Currying is when you break down a function that takes multiple arguments into a series of functions that each take only one argument.
+
+- Example: This is a function that takes two arguments, a and b, and returns their sum. 
+```javascript
+function add (a, b) {
+  return a + b;
+}
+add(3, 4); // returns 7
+```
+
+lambda method:
+```javascript
+const a = x => y => z => x + y + z;
+```
+
+curried function:
+```javascript
+const addXYZ = function(x){
+   return function(y){
+      return function(z){
+         return x + y + z;
+      }
+   }
+};
+```
+   
 ### Arity
 - The arity of a function represents the numbers of arguments it takes.
 - A unary function is a function that takes one argument
@@ -135,5 +162,21 @@ Example:
 - A nullary function takes no argument
   
 - Currying transforms a n-nary function into n unary function.
+
+### Partial Expression
+- Partial application (or partial function application) refers to the process of fixing a number of arguments to a function, producing another function of smaller arity. 
+- Given a function , we might fix (or 'bind') the first argument, producing a function of type .
+
+Example: 
+![image](https://github.com/TheDaniel3131/advanced-programming-language-concepts-materials-and-exercises/assets/71692327/a6edba12-0d5e-43eb-be09-fe6303d8eaf3)
+
+### Curried Function Vs. Partial Application
+- Currying is the process of transforming an m-ary function (that is, a function of arity m) into a sequence of m unary functions, each of which receives one argument of the original function, from left to right. (The first function receives the first argument of the original function, the second function receives the second argument, and so on.) Upon being called with an argument, each function produces the next one in the sequence, and the last one does the actual calculations. 
+
+- Partial application is the idea of providing n arguments to a m-ary function, being n less than or equal to m, to transform it into a function with (m-n) parameters. Each time you provide some arguments, a new function is produced, with smaller arity. When you provide the last arguments, the actual calculations are performed. 
+
+- Partial currying is a mixture of both preceding ideas: you provide n arguments (from left to right) to a m-ary function and you produce a new function of arity (m-n). When this new function receives some other arguments, also from left to right, it will produce yet another function. When the last parameters are provided, the function produces the correct calculations.
+
+
 
 
