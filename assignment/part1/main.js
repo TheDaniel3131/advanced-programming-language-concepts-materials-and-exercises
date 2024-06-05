@@ -33,8 +33,8 @@ function sADCI2(cityname){
 function calculateTotalPopulation() {
     let totalPopulation = 0;
     for (const city of data) {
-        // use parseInt to convert string to integer
-        totalPopulation += parseInt(city.population);
+        // coersion to convert string to number
+        totalPopulation += +city.population;
     }
     return totalPopulation;
 }
@@ -43,7 +43,7 @@ function calculateTotalPopulation() {
 function cTP2(){
     let totalPopulation = 0;
     for (let city = 0; city < data.length; city++){
-        totalPopulation += parseInt(data[city].population);
+        totalPopulation += +data[city].population;
     }
     return totalPopulation;
 }
@@ -52,7 +52,8 @@ function cTP2(){
 // 1.2 Relationship Between Two Cities (Could be Comparison)
 
 // Function 1
-function relationshipBetweenTwoCities(city1, city2) {
+// Population
+function rbTCa(city1, city2) {
     let city1Data = {};
     let city2Data = {};
 
@@ -65,11 +66,32 @@ function relationshipBetweenTwoCities(city1, city2) {
     }
 
     if (city1Data.population > city2Data.population) {
-        return `${city1} has a larger population than ${city2}`;
+        return `${city1} has a larger population than ${city2}.`;
     } else if (city1Data.population < city2Data.population) {
-        return `${city2} has a larger population than ${city1}`;
+        return `${city2} has a larger population than ${city1}.`;
+    }
+    return `${city1} and ${city2} have the same total of population!`;
+}
+
+// Function 2
+function rbTCa2(city1, city2){
+    let city1Data = {};
+    let city2Data = {};
+
+    for (let city = 0; city < data.length; city++){
+        if (data[city].city === city1){
+            city1Data = data[city];
+        } else if (data[city].city === city2){
+            city2Data = data[city];
+        }
+    }
+
+    if (city1Data.population > city2Data.population){
+        return `${city1} has a larger population than ${city2}.`;
+    } else if (city1Data.population < city2Data.population){
+        return `${city2} has a larger population than ${city1}.`;
     } else {
-        return `${city1} and ${city2} have the same population`;
+        return `${city1} and ${city2} have the same total of population!`;
     }
 }
 
@@ -83,5 +105,8 @@ function relationshipBetweenTwoCities(city1, city2) {
 // console.log(calculateTotalPopulation());
 // console.log(cTP2());
 
-console.log('1.3 | Relationship Between Two Cities');
-console.log('Relationship: ', relationshipBetweenTwoCities('Kangar', 'Kuala Lumpur'));
+// console.log('1.3 | Relationship Between Two Cities');
+// console.log(rbTCa('Kangar', 'Kuala Lumpur'));
+// console.log(rbTCa2('Kangar', 'Kuala Lumpur'));
+
+
