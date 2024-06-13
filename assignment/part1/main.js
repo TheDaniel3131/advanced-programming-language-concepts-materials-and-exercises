@@ -16,11 +16,12 @@ function searchAndDisplayCityInformation(cityName) {
     }
 }
 
+
 // Function 2
-function sADCI2(cityname){
-    for (let city = 0; city < data.length; city++){
+function sADCI2(cityname) {
+    for (let city = 0; city < data.length; city++) {
         citydata = data[city];
-        if (citydata.city === cityname){
+        if (citydata.city === cityname) {
             console.log(citydata);
         }
     }
@@ -32,20 +33,24 @@ function sADCI2(cityname){
 // Function 1
 function calculateTotalPopulation() {
     let totalPopulation = 0;
+    let totalPopulationProper = 0;
     for (const city of data) {
         // coersion to convert string to number
         totalPopulation += +city.population;
+        totalPopulationProper += +city.population_proper;
     }
-    return totalPopulation;
+    return "Total Population: " + totalPopulation + "\nTotal Population Proper: " + totalPopulationProper;
 }
 
 // Function 2
-function cTP2(){
+function cTP2() {
     let totalPopulation = 0;
-    for (let city = 0; city < data.length; city++){
+    let totalPopulationProper = 0;
+    for (let city = 0; city < data.length; city++) {
         totalPopulation += +data[city].population;
+        totalPopulationProper += +data[city].population_proper;
     }
-    return totalPopulation;
+    return "Total Population: " + totalPopulation + "\nTotal Population Proper: " + totalPopulationProper;
 }
 
 
@@ -74,21 +79,21 @@ function rbTCa(city1, city2) {
 }
 
 // Function 2
-function rbTCa2(city1, city2){
+function rbTCa2(city1, city2) {
     let city1Data = {};
     let city2Data = {};
 
-    for (let city = 0; city < data.length; city++){
-        if (data[city].city === city1){
+    for (let city = 0; city < data.length; city++) {
+        if (data[city].city === city1) {
             city1Data = data[city];
-        } else if (data[city].city === city2){
+        } else if (data[city].city === city2) {
             city2Data = data[city];
         }
     }
 
-    if (city1Data.population > city2Data.population){
+    if (city1Data.population > city2Data.population) {
         return `${city1} has a larger population than ${city2}.`;
-    } else if (city1Data.population < city2Data.population){
+    } else if (city1Data.population < city2Data.population) {
         return `${city2} has a larger population than ${city1}.`;
     } else {
         return `${city1} and ${city2} have the same total of population!`;
@@ -96,9 +101,11 @@ function rbTCa2(city1, city2){
 }
 
 
+
 // Test Cases
 // console.log('1.1 | Search & Display City Information');
 // console.log(searchAndDisplayCityInformation('Kangar'));
+// console.log(searchAndDisplayCityInformation('Kuala Lumpur'));
 // console.log(sADCI2('Kangar'));
 
 // console.log('1.2 | Calculate Total Population');
