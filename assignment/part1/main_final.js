@@ -211,12 +211,13 @@ function rbTCa() {
                     }
                 } else {
                     const comparisonTable = [
-                        { City: city1Data.city, Population: city1Data.population, Latitude: city1Data.lat, Longitude: city1Data.lng },
-                        { City: city2Data.city, Population: city2Data.population, Latitude: city2Data.lat, Longitude: city2Data.lng }
+                        { City: city1Data.city, Population: city1Data.population, Latitude: city1Data.lat, Longitude: city1Data.lng, State: city1Data.admin_name, Capital: city1Data.capital },
+                        { City: city2Data.city, Population: city2Data.population, Latitude: city2Data.lat, Longitude: city2Data.lng, State: city2Data.admin_name, Capital: city2Data.capital }
                     ];
 
                     console.table(comparisonTable);
 
+                    // Population comparison
                     if (city1Data.population > city2Data.population) {
                         console.log(`* ${city1Data.city} has a larger population than ${city2Data.city}.`);
                     } else if (city1Data.population < city2Data.population) {
@@ -225,10 +226,48 @@ function rbTCa() {
                         console.log(`* ${city1Data.city} and ${city2Data.city} have the same total population!`);
                     }
 
-                    // Calculate distance between cities
+                    // Calculate distance between cities (Distance Comparison)
                     const distance = calculateDistance(city1Data.lat, city1Data.lng, city2Data.lat, city2Data.lng);
                     console.log(`* The distance between ${city1Data.city} and ${city2Data.city} is approximately ${distance} km.`);
 
+                    // Latitude comparison
+                    if (parseFloat(city1Data.lat) > parseFloat(city2Data.lat)) {
+                        console.log(`* ${city1Data.city} is located further north than ${city2Data.city}.`);
+                    } else if (parseFloat(city1Data.lat) < parseFloat(city2Data.lat)) {
+                        console.log(`* ${city2Data.city} is located further north than ${city1Data.city}.`);
+                    } else {
+                        console.log(`* ${city1Data.city} and ${city2Data.city} are at the same latitude.`);
+                    }
+
+                    // Longitude comparison
+                    if (parseFloat(city1Data.lng) > parseFloat(city2Data.lng)) {
+                        console.log(`* ${city1Data.city} is located further east than ${city2Data.city}.`);
+                    } else if (parseFloat(city1Data.lng) < parseFloat(city2Data.lng)) {
+                        console.log(`* ${city2Data.city} is located further east than ${city1Data.city}.`);
+                    } else {
+                        console.log(`* ${city1Data.city} and ${city2Data.city} are at the same longitude.`);
+                    }
+
+                    // State comparison
+                    if (city1Data.admin_name === city2Data.admin_name) {
+                        console.log(`* Both cities are located in the state of ${city1Data.admin_name}.`);
+                    } else {
+                        console.log(`* ${city1Data.city} is in the state of ${city1Data.admin_name}, while ${city2Data.city} is in the state of ${city2Data.admin_name}.`);
+                    }
+
+                    // Capital status comparison
+                    if (city1Data.capital && city2Data.capital) {
+                        console.log(`* Both ${city1Data.city} and ${city2Data.city} are capital cities.`);
+                    } else if (city1Data.capital) {
+                        console.log(`* ${city1Data.city} is a capital city, but ${city2Data.city} is not.`);
+                    } else if (city2Data.capital) {
+                        console.log(`* ${city2Data.city} is a capital city, but ${city1Data.city} is not.`);
+                    } else {
+                        console.log(`* Neither ${city1Data.city} nor ${city2Data.city} are capital cities.`);
+                    }
+
+                    console.log("\n");
+                    console.log("----------------------------------------------------------------------------------------------------");
                     inter2.close();
                     main();
                 }
