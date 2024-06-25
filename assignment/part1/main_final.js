@@ -16,6 +16,7 @@ function displayMenu() {
                      4. Exit
              
          =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+         
     `);
 }
 
@@ -72,7 +73,7 @@ function searchAndDisplayCityInformation() {
     let wrongInputCnt = 0;
 
     function askQuestion() {
-        console.log("---------------------------------------------------------");
+        console.log("\n");
         inter1.question('Enter city name of your choice: ', function (cityName) {
             console.log("---------------------------------------------------------");
             let cityFound = false;
@@ -143,16 +144,13 @@ function calculateTotalPopulation() {
         totalPopulationProper += +city.population_proper;
     }
 
-    console.log("----------------------------------------------------------------------------------------------------");
     console.log("\n");
     return "Total Population: " + totalPopulation + "\nTotal Population Proper: " + totalPopulationProper;
-
 }
-
 
 // 1.2 Relationship Between Two Cities (Comparison)
 
-// Calculate distance between two cities - Formulas
+// Calculate distance between two cities - Formulas (Add for fun)
 function calculateDistance(lat1, lon1, lat2, lon2) {
     const R = 6371; // Earth Radius in KM
     const dLat = deg2rad(lat2 - lat1);
@@ -180,7 +178,6 @@ function rbTCa() {
     let wrongInputCnt = 0;
 
     function askQuestion() {
-        console.log("----------------------------------------------------------------------------------------------------");
         console.log("\n");
         inter2.question(`Enter a first city to compare: `, function (name1) {
             inter2.question(`Enter a second city to compare: `, function (name2) {
@@ -276,22 +273,6 @@ function rbTCa() {
     }
     askQuestion();
 }
-
-
-// Test Cases
-
-// console.log('1.1 | Search & Display City Information');
-// searchAndDisplayCityInformation();
-// sADCI2('Kuala Lumpur');
-
-// console.log('1.2 | Calculate Total Population');
-// console.log(calculateTotalPopulation());
-// console.log(cTP2());
-
-// console.log('1.3 | Relationship Between Two Cities');
-// rbTCa('Kangar', 'Kuala Lumpur');
-// console.log(rbTCa2('Kangar', 'Kuala Lumpur'));
-
 
 
 // Run Program
