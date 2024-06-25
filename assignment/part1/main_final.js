@@ -78,7 +78,7 @@ function searchAndDisplayCityInformation() {
             console.log("---------------------------------------------------------");
             let cityFound = false;
             for (const city of data) {
-                if (city.city.toLowerCase() === cityName.toLowerCase()) {
+                if (city.city === cityName) {
                     cityFound = true;
                     const newline = '\n';
                     const decoline_repeater = "-".repeat(45);
