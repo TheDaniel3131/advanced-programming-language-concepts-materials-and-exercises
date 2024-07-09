@@ -1,4 +1,6 @@
-## // Prolog Structure
+## // Prolog Structure 
+
+#### Look for position matching.
 
 ### // Fact
 ```prolog
@@ -11,6 +13,8 @@ isA("Stephen", male).
 ```
 
 ### // Rules
+
+isA(Who, What):- isA(W, human); isA(W, female).
 ```prolog
 isA(W, woman):- isA(W, human); isA(w, female).
 W = "Jury"
