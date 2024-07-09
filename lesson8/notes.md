@@ -13,9 +13,9 @@ isA("Stephen", male).
 ```
 
 ### // Rules
-
-isA(Who, What):- isA(W, human); isA(W, female).
 ```prolog
+Ex: isA(Who, What):- isA(W, human); isA(W, female).
+
 isA(W, woman):- isA(W, human); isA(W, female).
 W = "Jury"
 ```
@@ -26,7 +26,7 @@ isA(W, female).
 W = "Jury"
 ```
 
-### Code Example (https://swish.swi-prolog.org/)
+### Code Example (Run at: https://swish.swi-prolog.org/, Docs at: https://www.swi-prolog.org/pldoc/man?section=cmdline)
 ```prolog
 % Student exercise profile
 :- set_prolog_flag(occurs_check, error).        % disallow cyclic terms
@@ -51,10 +51,8 @@ likes(Person, outgoing):- hasfriend(Person, jiakin); isA(Person, male).
 ```
 
 (The Error Message is a warning to enforce best practices)
+
 ![image](https://github.com/TheDaniel3131/advanced-programming-language-concepts-materials-and-exercises/assets/71692327/d86a5edd-e196-4c75-83fd-7368bfe9000e)
-
-
-
 
 
 
