@@ -1,4 +1,4 @@
-## // Prolog Structure 
+## Prolog  
 
 #### Use for logic or functional programming. By defining rules and setting facts, we can look for position matching through queries.
 
