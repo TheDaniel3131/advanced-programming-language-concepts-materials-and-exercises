@@ -16,7 +16,7 @@ isA("Stephen", male).
 
 isA(Who, What):- isA(W, human); isA(W, female).
 ```prolog
-isA(W, woman):- isA(W, human); isA(w, female).
+isA(W, woman):- isA(W, human); isA(W, female).
 W = "Jury"
 ```
 
