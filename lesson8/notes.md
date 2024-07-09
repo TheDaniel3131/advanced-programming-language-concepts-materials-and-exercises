@@ -26,7 +26,7 @@ isA(W, female).
 W = "Jury"
 ```
 
-### Code Example (Run at: https://swish.swi-prolog.org/, Docs at: https://www.swi-prolog.org/pldoc/man?section=cmdline)
+##### Code Example (Run at: https://swish.swi-prolog.org/ using student template, Docs at: https://www.swi-prolog.org/pldoc/man?section=cmdline)
 ```prolog
 % Student exercise profile
 :- set_prolog_flag(occurs_check, error).        % disallow cyclic terms
