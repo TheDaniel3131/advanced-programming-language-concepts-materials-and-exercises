@@ -124,3 +124,20 @@ false.
 ?- 
 
 ```
+
+https://lpn.swi-prolog.org/lpnpage.php?pagetype=html&pageid=lpn-html
+
+
+```prolog
+add(Y,X):- R is Y+X, write(R).
+larger(X,Y):- (X>Y, write(X));((X<Y), write(Y)); write("Both are equal").
+ 
+total([],0).
+total([H|T],R) :- write(H),nl, total(T,S), R is S+H.
+ 
+display([]):-write("list is empty").
+display([H | T]) :- 
+    write(H),nl,
+    H \= T,
+    display(T)
+```
