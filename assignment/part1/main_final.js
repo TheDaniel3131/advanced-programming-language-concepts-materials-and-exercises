@@ -1,4 +1,3 @@
-// ~ Daniel Poh Ting Fong TP056258 ~ //
 // Part 1 - Imperative Programming
 
 // Additional - CLI:
