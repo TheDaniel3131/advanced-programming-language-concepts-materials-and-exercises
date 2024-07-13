@@ -6,12 +6,14 @@ To execute, please install live server extension in VSCode and run part2.html (g
 
 Some initialization and queries to run in prolog!
 
-```prolog
-consult('D:/Degree 2023/Degree Year 3 2024/Advanced Programming Language Concepts/Assignment/part2/cities.pl').
-
+```shell
+swipl -s cities.pl
+```
 or
 
-swipl -s cities.pl
+```prolog
+
+consult('D:/Degree 2023/Degree Year 3 2024/Advanced Programming Language Concepts/Assignment/part2/cities.pl').
 
 whosFurther("Kuala Lumpur", "Ipoh", "Klang").
 sameRegion("Kuala Lumpur", "Kuala Lumpur").
