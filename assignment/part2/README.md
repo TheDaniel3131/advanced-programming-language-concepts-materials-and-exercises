@@ -13,7 +13,7 @@ or
 
 ```prolog
 
-consult('D:/Degree 2023/Degree Year 3 2024/Advanced Programming Language Concepts/Assignment/part2/cities.pl').
+consult("D:/Degree 2023/Degree Year 3 2024/Advanced Programming Language Concepts/Assignment/part2/cities.pl").
 
 whosFurther("Kuala Lumpur", "Ipoh", "Klang").
 sameRegion("Kuala Lumpur", "Kuala Lumpur").
