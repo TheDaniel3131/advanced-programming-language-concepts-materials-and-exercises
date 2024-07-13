@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tau-prolog/0.2.3/tau-prolog.min.js"></script>
+    <title>APLC Assignment</title>
+  </head>
+  <body>
+    <h1>APLC Assignment (Part 2)</h1>
+    <div>
+      <h2>Q1: Search For A City And Display The Details</h2>
+      <label for="searchCity">Search City:</label>
+      <input type="text" id="search" value="Kuala Lumpur" />
+      <button onclick="domSearch()">Search</button>
+      <div id="details"></div>
+    </div>
+    <div>
+      <h2>Q2: Calculate The Total Population</h2>
+      <div>
+        <button onclick="domPopulation()">Show Total Population</button>
+        <p id="total_population"></p>
+      </div>
+      <div>
+        <label for="searchCity">Find Total Population of:</label>
+        <input type="text" id="search2" value="Kuala Lumpur" />
+        <button onclick="domFindPopulation()">Find</button>
+        <p id="totalPopulationCity"></p>
+      </div>
+    </div>
+    <div>
+      <h2>Q3: Find The Relationship Between Two Cities</h2>
+      <label for="city1">City 1:</label>
+      <input type="text" id="city1" value="Kuala Lumpur" />
+
+      <label for="city2">City 2:</label>
+      <input type="text" id="city2" value="Kangar" />
+
+      <p>*Only for <strong>Which City is Closer?</strong></p>
+      <label for="city3">Static City:</label>
+      <input type="text" id="city3" value="Klang" />
+      <br />
+      <br />
+      <button id="distance" onclick="domCityRelationship(event)">
+        Which City is Closer?
+      </button>
+      <button id="region" onclick="domCityRelationship(event)">
+        Are the Cities in Same Region?
+      </button>
+      <p id="result"></p>
+    </div>
+    <script src="part2.js"></script>
+  </body>
+</html>
