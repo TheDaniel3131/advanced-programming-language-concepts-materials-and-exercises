@@ -1,4 +1,3 @@
-// Daniel Poh Ting Fong TP056258 
 // APLC Assignment (Part 2) - Functional Programming
 
 let CITIES = [];
