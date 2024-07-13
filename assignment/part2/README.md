@@ -1,4 +1,4 @@
-## APLC Assignment Part 2.
+## APLC Assignment Part 2
 
 Received permission from Rayes Chan's Part 1 code & modified it into a functional code using built-in functions from JavaScript. You can check MDN documentation for more information: https://developer.mozilla.org/en-US/docs/Web/JavaScript.
 
