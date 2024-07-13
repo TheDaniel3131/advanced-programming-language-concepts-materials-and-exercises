@@ -1,6 +1,6 @@
 This is for APLC Assignment Part 2.
 
-I had received permission from Rayes Chan Zhan Hui's Part 1 code & Modified it into a functional code using built-in functions from JavaScript. You can check MDN documentation for more information: https://developer.mozilla.org/en-US/docs/Web/JavaScript.
+Received permission from Rayes Chans' Part 1 code & modified it into a functional code using built-in functions from JavaScript. You can check MDN documentation for more information: https://developer.mozilla.org/en-US/docs/Web/JavaScript.
 
 To execute, please install live server extension in VSCode and run part2.html (go live - at the bottom taskbar of VSCode.)
 
